@@ -49,3 +49,10 @@ app.get('/tasks', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+app.get('/', (req, res) => {
+  res.json({
+    app:     'CISC 886 Lab 8',
+    host:    os.hostname(),
+    version: 'v2 - Tea added',
+  });
+});
