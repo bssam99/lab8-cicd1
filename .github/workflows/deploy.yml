@@ -24,7 +24,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/lab8-cicd:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/lab8-cicd1:latest
 
       - name: Deploy to EC2
         uses: appleboy/ssh-action@v1.0.3
@@ -33,7 +33,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_KEY }}
           script: |
-            cd ~/lab8-cicd
+            cd ~/lab8-cicd1
             git pull
             docker compose pull
             docker compose down

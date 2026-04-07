@@ -6,7 +6,7 @@ const app  = express();
 const PORT = 3000;
 
 const MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost:27017';
-const DB_NAME   = 'lab8db';
+const DB_NAME   = 'lab8db1';
 
 let db;
 
